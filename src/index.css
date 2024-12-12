@@ -1,0 +1,51 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* Image Scrolling Animation */
+.scroll-container {
+  display: flex;
+  animation: scrollRightToLeft 20s linear infinite;
+}
+
+.scroll-image {
+  min-width: 100%;
+  height: auto;
+}
+
+/* Animation Keyframes */
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+*{
+  ::-webkit-scrollbar{
+      display: none;
+  }
+
+  user-select: none;
+}
+
+
+
+/* Image Scrolling Animation */
+
+
+.group:hover span {
+  opacity: 1 !important;
+}
+
+

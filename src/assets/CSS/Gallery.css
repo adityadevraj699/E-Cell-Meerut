@@ -1,0 +1,73 @@
+/* General Styles */
+.gallery-bg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(50, 50, 50, 0.5)),
+      url('https://d.newsweek.com/en/full/2219726/new-ideas.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    color: white;
+    padding: 20px 0;
+    background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+.gallery-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+  z-index: -1;
+
+  }
+  
+  /* Responsive Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 20px;
+  }
+  
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small devices */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for large devices */
+    }
+  }
+  
+  /* Buttons for Filters */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Modal */
+  .modal-content {
+    max-width: 90%; /* Ensure modal adapts to smaller screens */
+    max-height: 90%;
+    overflow: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .modal-content {
+      max-width: 60%;
+    }
+  }
+  
+
+
+
+  
+  
